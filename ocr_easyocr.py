@@ -4,7 +4,7 @@ from ultralytics import YOLO
 import easyocr
 
 model = YOLO("src/runs/detect/train4/weights/best.pt")
-reader = easyocr.Reader(['pt', 'en']) 
+reader = easyocr.Reader(['pt', 'en'])
 
 INPUT_FOLDER = "src/placas_dataset/tests/images"
 OUTPUT_FOLDER = "src/placas_dataset/results"
