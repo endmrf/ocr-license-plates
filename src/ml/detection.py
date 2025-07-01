@@ -1,9 +1,9 @@
 import os
 from ultralytics import YOLO
 
-model = YOLO("src/runs/detect/train4/weights/best.pt")
+model = YOLO("runs/detect/train4/weights/best.pt")
 
-image_folder = "src/placas_dataset/tests/images"
+image_folder = "placas_dataset/tests/images"
 
 for image_name in os.listdir(image_folder):
     image_path = os.path.join(image_folder, image_name)
