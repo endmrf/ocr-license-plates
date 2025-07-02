@@ -30,9 +30,7 @@ class OcrEasyOcrUseCase():
             for box in results[0].boxes.xyxy:
                 x1, y1, x2, y2 = map(int, box[:4])
                 
-                # Calcular nova área do recorte eliminando a parte superior (onde fica "BRASIL")
                 height = y2 - y1
-                # Remove aproximadamente 35% da parte superior da placa
                 new_y1 = y1 + int(height * 0.30)
                 
                 cropped = image[new_y1:y2, x1:x2]
